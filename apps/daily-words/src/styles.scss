@@ -1,0 +1,10 @@
+@import "styles/custom-theme";
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { max-width: 90%; margin: 16px auto; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-toolbar {
+  background-color: white !important;
+}
