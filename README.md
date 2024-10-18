@@ -1,6 +1,6 @@
 # DailyWords
 
-✨ Daily Words application is a simple dictionary application you can use to search words. It is built with Angular v18 using standalone component and implements Atomic Design Mythodology on designing shared components. It uses Event Bus pattern with Signals to communicate components actions.✨.
+✨ Daily Words application is a simple dictionary application you can use to search words. It is built with Angular v18 using standalone component and implements Atomic Design Methodology on designing shared components. It uses Event Bus pattern with Signals to communicate components actions.✨.
 
 [Learn more about this workspace setup and its capabilities](https://nx.dev/getting-started/tutorials/angular-monorepo-tutorial?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
 
@@ -65,6 +65,8 @@ Nx Console is an editor extension that enriches your developer experience. It le
 ## Useful links
 
 Learn more:
+
+- [Atomic Design Methodology](https://atomicdesign.bradfrost.com/chapter-2/)
 
 - [Learn more about this workspace setup](https://nx.dev/getting-started/tutorials/angular-monorepo-tutorial?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 - [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
