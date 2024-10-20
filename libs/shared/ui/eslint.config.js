@@ -12,7 +12,7 @@ module.exports = [
         'error',
         {
           type: 'attribute',
-          prefix: 'lib',
+          prefix: 'dw',
           style: 'camelCase',
         },
       ],
@@ -20,8 +20,21 @@ module.exports = [
         'error',
         {
           type: 'element',
-          prefix: 'lib',
+          prefix: 'dw',
           style: 'kebab-case',
+        },
+      ],
+      '@nx/enforce-module-boundaries': [
+        'error',
+        {
+          enforceBuildableLibDependency: true,
+          allow: ['@daily-words/ui'],
+          depConstraints: [
+            {
+              sourceTag: '*',
+              onlyDependOnLibsWithTags: ['*'],
+            },
+          ],
         },
       ],
     },
@@ -29,6 +42,8 @@ module.exports = [
   {
     files: ['**/*.html'],
     // Override or add rules here
-    rules: {},
+    rules: {
+      '@typescript-eslint/ban-ts-comment': 'off',
+    },
   },
 ];

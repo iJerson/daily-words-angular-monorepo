@@ -6,7 +6,7 @@ import { ButtonComponent, SearchFormComponent } from '@daily-words/ui';
 import { Word, WordService } from '@daily-words/words';
 
 @Component({
-  selector: 'app-home',
+  selector: 'dw-home',
   standalone: true,
   imports: [CommonModule, SearchFormComponent, ButtonComponent],
   template: `
@@ -21,7 +21,7 @@ import { Word, WordService } from '@daily-words/words';
           {{ word.word }}
           <dw-button type="icon" icon="volume_up" [event]="audioPlayEvent" />
         </h4>
-        <label>{{ word.phonetic }}</label>
+        <p>{{ word.phonetic }}</p>
         <ng-container *ngFor="let meaning of word.meanings">
           <p>{{ meaning.partOfSpeech }}</p>
           <ul>

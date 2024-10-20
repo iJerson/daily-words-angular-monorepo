@@ -10,27 +10,52 @@ import { EventBusService } from '@daily-words/services';
   imports: [CommonModule, MatButtonModule, MatIconModule],
   template: `
     @switch (type()) { @case ('basic') {
-    <button mat-button (click)="onClick()">{{ label() }}</button>
+    <button mat-button (click)="onClick()" class="dw-button">
+      {{ label() }}
+    </button>
     } @case ('raised') {
-    <button mat-raised-button (click)="onClick()">{{ label() }}</button>
+    <button mat-raised-button (click)="onClick()" class="dw-raised-button">
+      {{ label() }}
+    </button>
     } @case ('stroked') {
-    <button mat-stroked-button (click)="onClick()">{{ label() }}</button>
+    <button mat-stroked-button (click)="onClick()" class="dw-stroked-button">
+      {{ label() }}
+    </button>
     } @case ('flat') {
-    <button mat-flat-button (click)="onClick()">{{ label() }}</button>
+    <button mat-flat-button (click)="onClick()" class="dw-flat-button">
+      {{ label() }}
+    </button>
     } @case ('icon') {
-    <button mat-icon-button [attr.aria-label]="ariaLabel()" (click)="onClick()">
+    <button
+      mat-icon-button
+      [attr.aria-label]="ariaLabel()"
+      (click)="onClick()"
+      class="dw-icon-button"
+    >
       <mat-icon>{{ icon() }}</mat-icon>
     </button>
     } @case ('fab') {
-    <button mat-fab [attr.aria-label]="ariaLabel()" (click)="onClick()">
+    <button
+      mat-fab
+      [attr.aria-label]="ariaLabel()"
+      (click)="onClick()"
+      class="dw-fab-button"
+    >
       <mat-icon>{{ icon() }}</mat-icon>
     </button>
     } @case ('mini-fab') {
-    <button mat-mini-fab [attr.aria-label]="ariaLabel()" (click)="onClick()">
+    <button
+      mat-mini-fab
+      [attr.aria-label]="ariaLabel()"
+      (click)="onClick()"
+      class="dw-mini-fab-button"
+    >
       <mat-icon>{{ icon() }}</mat-icon>
     </button>
     } @default {
-    <button mat-button (click)="onClick()">{{ label() }}</button>
+    <button mat-button (click)="onClick()" class="dw-button">
+      {{ label() }}
+    </button>
     } }
   `,
   styles: ``,
@@ -45,7 +70,6 @@ export class ButtonComponent {
   eventBusService = inject(EventBusService);
 
   onClick() {
-    console.log('Button clicked', this.event());
     this.eventBusService.emit(this.event());
   }
 }

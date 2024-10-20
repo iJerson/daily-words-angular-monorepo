@@ -5,7 +5,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 @Component({
   standalone: true,
   imports: [RouterModule, MatToolbarModule],
-  selector: 'app-root',
+  selector: 'dw-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

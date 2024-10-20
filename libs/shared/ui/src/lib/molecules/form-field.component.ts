@@ -13,12 +13,6 @@ import {
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 
-export const NOOP_VALUE_ACCESSOR: ControlValueAccessor = {
-  writeValue(): void {},
-  registerOnChange(): void {},
-  registerOnTouched(): void {},
-};
-
 @Component({
   selector: 'dw-form-field',
   standalone: true,
@@ -56,11 +50,9 @@ export const NOOP_VALUE_ACCESSOR: ControlValueAccessor = {
   `,
 })
 export class FormFieldComponent {
-  // Required inputs
   control = input.required<FormControl>();
   name = input.required<string>();
 
-  // Optional inputs
   appearance = input<FormFieldAppearance>('outline');
   label = input<string>('');
   placeholder = input<string>('');
@@ -75,3 +67,12 @@ export class FormFieldComponent {
 }
 
 type FormFieldAppearance = MatFormFieldAppearance;
+
+export const NOOP_VALUE_ACCESSOR: ControlValueAccessor = {
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  writeValue(): void {},
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  registerOnChange(): void {},
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  registerOnTouched(): void {},
+};

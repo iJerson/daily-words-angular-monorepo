@@ -12,7 +12,7 @@ module.exports = [
         'error',
         {
           type: 'attribute',
-          prefix: 'app',
+          prefix: 'dw',
           style: 'camelCase',
         },
       ],
@@ -20,7 +20,7 @@ module.exports = [
         'error',
         {
           type: 'element',
-          prefix: 'app',
+          prefix: 'dw',
           style: 'kebab-case',
         },
       ],
@@ -29,6 +29,8 @@ module.exports = [
   {
     files: ['**/*.html'],
     // Override or add rules here
-    rules: {},
+    rules: {
+      '@typescript-eslint/ban-ts-comment': 'off',
+    },
   },
 ];
