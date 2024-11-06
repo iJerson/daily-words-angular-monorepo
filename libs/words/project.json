@@ -19,8 +19,7 @@
     "deploy": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "aws s3 sync dist/apps/daily-words s3://{args.bucketName}/ --delete",
-        "forwardAllArgs": false
+        "command": "aws s3 sync dist/apps/daily-words s3://daily-words/ --delete"
       }
     }
   }

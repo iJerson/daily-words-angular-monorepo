@@ -56,4 +56,4 @@ jobs:
       - name: Deploy Application to AWS S3 Bucket
         uses: nrwl/nx-set-shas@v4
 
-      - run: npx nx affected -t deploy --bucketName="${{ secrets.BUCKET_NAME }}"
+      - run: npx nx affected -t deploy"
