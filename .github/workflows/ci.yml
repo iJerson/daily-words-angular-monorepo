@@ -59,4 +59,4 @@ jobs:
           aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
 
       - uses: nrwl/nx-set-shas@v4
-      - run: npx nx affected -t deploy"
+      - run: npx nx affected -t deploy
