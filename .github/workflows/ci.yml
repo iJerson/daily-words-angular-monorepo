@@ -57,4 +57,4 @@ jobs:
 
       - uses: nrwl/nx-set-shas@v4
       - run: npx nx affected -t deploy --no-agents
-      - run: npx nx affected -t invalidate --distributionId=${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }}
+      - run: npx nx affected -t invalidate --distributionId=${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }} --no-agents
