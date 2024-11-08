@@ -91,6 +91,12 @@
         "staticFilePath": "dist/apps/daily-words/browser",
         "spa": true
       }
+    },
+    "deploy": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx run deploy:prod:daily-words"
+      }
     }
   }
 }
