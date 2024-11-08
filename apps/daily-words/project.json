@@ -95,7 +95,7 @@
     "deploy": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "npx run deploy:prod:daily-words"
+        "command": "npm run deploy:prod:daily-words"
       }
     }
   }
