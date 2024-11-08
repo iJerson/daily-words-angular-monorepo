@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "deploy:prod:daily-words": "aws s3 sync dist/apps/daily-words s3://daily-words/ --delete"
+    "deploy:prod:daily-words": "aws s3 sync dist/apps/daily-words s3://daily-words/ --delete",
+    "invalidate:cf:daily-words": "aws cloudfront create-invalidation"
   },
   "private": true,
   "dependencies": {

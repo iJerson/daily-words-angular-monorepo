@@ -97,6 +97,13 @@
       "options": {
         "command": "npm run deploy:prod:daily-words"
       }
+    },
+    "invalidate": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npm run invalidate:cf:daily-words",
+        "args": ["--distribution-id=", "--paths=\"/*\""]
+      }
     }
   }
 }
