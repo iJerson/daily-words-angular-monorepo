@@ -101,7 +101,7 @@
     "invalidate": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "npm run invalidate:cf:daily-words",
+        "command": "npm run invalidate:cf:daily-words --",
         "args": ["--distribution-id=", "--paths=\"/*\""]
       }
     }
